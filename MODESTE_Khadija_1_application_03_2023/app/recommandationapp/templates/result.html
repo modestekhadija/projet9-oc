@@ -1,0 +1,20 @@
+
+{% extends 'base.html' %}    
+    {% block content %}
+
+    <div class="articles">
+        Les articles à recommander à l'utilisateur n° {{ user_id }} sont :
+    </div>
+
+
+    <div class="liste">
+        <ul>
+            <li>Article numéro {{ recommandations[0] }}</li>
+            <li>Article numéro {{ recommandations[1] }}</li>
+            <li>Article numéro {{ recommandations[2] }}</li>
+            <li>Article numéro {{ recommandations[3] }}</li>
+            <li>Article numéro {{ recommandations[4] }}</li>
+        </ul>
+    </div>
+
+    {% endblock %}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'styles.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename = 'img/mycontent.png') }}" type="image/png">
+    <title>Réalisez une application de recommandation de contenu</title>
+    
+</head>
+   
+<body>
+    <header>
+        <img src= "{{ url_for('static', filename = 'img/mycontent.png') }}" alt="">
+    </header>
+
+    <div >
+        <div class="titre">
+                Recommandation d'articles
+        </div>
+
+
+        <div class="user_id">
+            {% block formulaire %}{% endblock %}
+             
+        </div>
+
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+            <div class="footer">
+            Application rélisée dans le cadre du projet 9 "Réalisez une application de recommandation de contenu" de la formation ingénieur IA d'OpenClassrooms
+            </div>
+    </footer>
+
+</body>
+
+</html>

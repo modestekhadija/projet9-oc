@@ -1,0 +1,34 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "$return"
+    },
+    {
+      "type": "blob",
+      "direction": "in",
+      "name": "mergeblob",
+      "path": "data/merge_user_article.csv",
+      "connection": "AzureWebJobsBlobStorageApp"
+    },
+
+    {
+      "type": "blob",
+      "direction": "in",
+      "name": "metadatablob",
+      "path": "data/articles_metadata.csv",
+      "connection": "AzureWebJobsBlobStorageApp"
+    }
+  ]
+}

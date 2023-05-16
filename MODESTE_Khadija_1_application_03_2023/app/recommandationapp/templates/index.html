@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block formulaire %}
+<form action="result" method="get">
+    <label for="user_id">
+        Choisir l'identifiant de l'utilisateur :  
+    </label>
+
+    <select id="user_id" name="user_id">
+      {% for nombre in range(1001) %}
+      <option value="{{ nombre }}">{{ nombre }}</option>
+      {% endfor %}
+    </select>
+    <div class="soumettre">
+        <button class="button-1" type="submit">Valider</button>
+    </div>
+    
+  </form>
+
+  {% endblock %}
